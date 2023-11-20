@@ -2,7 +2,7 @@
 ** Summary
 
 This package is a minor mode which enhances Deft in various ways to make it
-a more high-fidelity emulation of the Notational Velocity application [1] upon
+a more high-fidelity emulation of the [[https://notational.net][Notational Velocity]] application upon
 which it is based. In particular, it adds the following features:
 
 - Preview the file at point in the Deft buffer. The preview is updated whenever the line number of the point is changed, or when the Deft filter is changed.
