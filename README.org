@@ -1,0 +1,43 @@
+* Deft Preview
+** Summary
+
+This package is a minor mode which enhances Deft in various ways to make it
+a more high-fidelity emulation of the Notational Velocity application [1] upon
+which it is based. In particular, it adds the following features:
+
+- Preview the file at point in the Deft buffer. The preview is updated whenever the line number of the point is changed, or when the Deft filter is changed.
+- Highlight the current line in the Deft buffer.
+
+** Installation
+
+This package can be cloned from GitHub via the following command:
+
+#+begin_src bash
+git clone https://github.com/shankar2k/deft-preview.git
+#+end_src
+
+To start using it, place it somewhere in your Emacs load-path and add it as a
+company backend with following commands:
+
+#+begin_src emacs-lisp
+  (require 'deft-preview)
+  (deft-preview-mode +1)
+#+end_src
+
+in your ~.emacs.d/init.el~ file. 
+
+If you use ~use-package~, you can configure this as follows:
+
+#+begin_src emacs-lisp
+  (use-package deft-preview
+    :load-path (lambda () "<path to deft-preview dir>")
+    :after (deft)
+    :ensure nil
+    :config
+    (deft-preview-mode +1))
+#+end_src
+
+** Credits
+
+This package extends the [[https://jblevins.org/projects/deft/][Deft]] package and also leverages the temporary
+ file previewing capability of [[https://protesilaos.com/emacs/dired-preview][Dired Preview]].
